@@ -1,6 +1,6 @@
-\documentclass{econtex}
+\input{./econtexPaths.tex}\documentclass{\econtex}
 
-\usepackage{econtexSetup}\usepackage{econtexShortcuts}
+\usepackage{\econtexSetup}\usepackage{\econtexShortcuts}
 
 \provideboolean{Post}     % Post handouts to web as part of compilation - SLOW
 \provideboolean{Copy}     % Copy handouts to Handouts directory as part of compilation
@@ -10,7 +10,7 @@
 \setboolean{Copy}{true}
 \opt{Web}{\setboolean{Copy}{false}\setboolean{Post}{false}}
 
-\begin{document}
+\begin{document}\bibliographystyle{\econtexBibStyle}
 \begin{center}{{\tiny \url{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus}}}\end{center}
 
 \ifthenelse{\boolean{BigAndWide}}{\Large}{}
@@ -49,7 +49,7 @@ Professor Christopher D. Carroll
 
 Office Hours: See web page
 
-Use password obtainable \href{https://www.econ2.jhu.edu/people/ccarroll/private/PasswordForCarrollCDCApptsAccount.txt}{here} (if logged into JHU VPN) for Google calendar: \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}}
+Use password obtainable \href{https://www.econ2.jhu.edu/people/ccarroll/private/PasswordForCarrollCDCApptsAccount.txt}{[here]} (if logged into JHU VPN) for Google calendar: \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}}
 
 \medskip\medskip\medskip
 Teaching Assistant:  \\
@@ -330,7 +330,7 @@ Real Business Cycle Models
 
 \renewcommand\refname{\noindent{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.bib}{\large Readings {\small (click to download \texttt{.bib} file)}}}}
 
-\input econtexBibMake
+\bibliography{economics,Syllabus,Syllabus-Add}
 
 \end{document}
 
