@@ -312,6 +312,8 @@ latexmkrc
 
 #
 
+Syllabus.pdf
+
 *-Old.tex
 
 texput.log
