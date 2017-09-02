@@ -1,6 +1,7 @@
-\input{./econtexPaths.tex}\documentclass{\econtex}\newcommand{\texname}{Syllabus}
+\input{./econtexPaths.tex}\input{./econtexPaths.tex}\documentclass{\econtex}
 
 \usepackage{\econtexSetup}\usepackage{\econtexShortcuts}
+  
 
 \provideboolean{Post}     % Post handouts to web as part of compilation - SLOW
 \provideboolean{Copy}     % Copy handouts to Handouts directory as part of compilation
@@ -11,12 +12,12 @@
 \opt{Web}{\setboolean{Copy}{false}\setboolean{Post}{false}}
 
 \begin{document}\bibliographystyle{\econtexBibStyle}
-\begin{center}{{\tiny \url{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus}}}\end{center}
+\begin{center}{{\tiny \url{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.pdf}}}\end{center}
 
 \ifthenelse{\boolean{BigAndWide}}{\Large}{}
 
-\begin{verbatimwrite}{\texname.title}
-Syllabus for Intertemporal Choice
+\begin{verbatimwrite}{\jobname.title}
+Syllabus for 180.604
 \end{verbatimwrite}
 
 \thispagestyle{empty}
@@ -28,9 +29,9 @@ Syllabus for Intertemporal Choice
 \thispagestyle{empty}
 
 \begin{center}
-{\tiny \href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.pdf}{\texname} \hfill \today}
+{\tiny \href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.pdf}{\jobname} \hfill \today}
 
-{\LARGE Syllabus}
+{\LARGE Syllabus for Intertemporal Choice}
 \medskip\medskip
 
 {\LARGE Macroeconomic Theory I: Intertemporal Choice}
@@ -49,34 +50,19 @@ Professor Christopher D. Carroll
 
 Office Hours: See web page
 
-Use password obtainable \href{https://www.econ2.jhu.edu/people/ccarroll/private/PasswordForCarrollCDCApptsAccount.txt}{[here]} (if logged into JHU VPN) for Google calendar: \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}}
+Use password \texttt{hopkins} for Google calendar: \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}}
 
 \medskip\medskip\medskip
-Teaching Assistant:  \\
+Teaching Assistant: Jiaxiong Yao \texttt{<\href{mailto:yaojiaxiong06@gmail.com}{\texttt{yaojiaxiong06@gmail.com}}>}
 
-Tongli Zhang \texttt{<\href{mailto:tzhang31@jhu.edu}{\texttt{tzhang31@jhu.edu}}>}
-\\ Office Hours: Mondays, 15:00-17:00 in the Greenhouse
+Office Hours: TBA %Wednesdays, Greenhouse 120, 10-11 am
 
-\medskip
-
-\end{center}
-
-\begin{small}
-
-If you're a Google Calendar user, you should be able to subscribe to the course calendar using the following Calendar ID (after logging into your Google account, copy and paste the text into the ``Other Calendars'' box in \href{http://calendar.google.com}{\texttt{http://calendar.google.com}}):
-
-\medskip
-\centerline{\texttt{jhuecon.org\_v2kso2hp1memk0vka1gomvorm8@group.calendar.google.com}}
-\medskip
-
-If you are not yet a Google Calendar user, you should become one; items that I post on the calendar will be viewed as having been distributed to the class.  If you insist on boycotting Google, however, you can see the calendar if you click \href{https://www.google.com/calendar/embed?src=jhuecon.org_v2kso2hp1memk0vka1gomvorm8\%40group.calendar.google.com\&ctz=America/New_York}{\bf HERE}
-
-\medskip
-
-\end{small}
+\medskip\medskip\medskip
+%Final Exam: 2011/05/11, 13:00-16:00
 
 \medskip\medskip
 
+\end{center}
 
 This course presents theory and evidence about the dynamic behavior of
 households, firms, and the macroeconomy as a whole.  We will begin
@@ -86,22 +72,22 @@ investment behavior of firms, including the relationship between
 financial markets and firm behavior.  We move next to a discussion of
 the application of dynamic models of firms and households to the
 process of economic growth, and conclude by studying aggregate
-macroeconomic models with dynamically optimizing firms and households.
+macroeconomic models with dynamically optimizing firms and households
+(the Real Business Cycle framework).
 
 This syllabus contains required and recommended readings for each
-topic.  Required readings are indicated by a $\star$. 
+topic.  Required readings are indicated by a *.  The readings will be
+placed in the Department library.
 
 You should own a copy of the texts by \cite{blanchard&fischer:text}, \cite{deatonUnderstandingC}, 
 \cite{romer:text} and \cite{lsRecurse}.
 
-{\small Students from other departments are welcome to take the course, but 
+PS.  Students from other departments are welcome to take the course, but 
 they should be prepared for regular use of higher mathematics (multivariate
 calculus, probability and statistics, functional analysis) which will be employed
-later in the course.}
+later in the course.
 
-\medskip\medskip
-\noindent Course handouts are available at: 
-\medskip
+\noindent Handouts: 
 
 \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/LectureNotes}{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/LectureNotes}}
 
@@ -121,26 +107,20 @@ Methodology for Macroeconomists
 \item[Readings:]
 \end{itemize}
 
-% \newcommand{\si}{\cite{summersIllusion}}
-% \newcommand{\ac}{\cite{acemogluCrisis}}
-% \newcommand{\gk}{\cite{grantKeynes}}
-% %\newcommand{\kt}{\cite{krugmanThoughts}}
-% \newcommand{\kh}{\cite{krugmanHistory}}
-% \newcommand{\cp}{\cite{caballeroPretense}}
-% \newcommand{\rr}{\cite{rodrikRules}}
-% \newcommand{\bf}{\cite{barberaFight}}     
+\newcommand{\si}{\cite{summersIllusion}}
+\newcommand{\ac}{\cite{acemogluCrisis}}
+\newcommand{\gk}{\cite{grantKeynes}}
+%\newcommand{\kt}{\cite{krugmanThoughts}}
+\newcommand{\kh}{\cite{krugmanHistory}}
+\newcommand{\cp}{\cite{caballeroPretense}}
 
 \begin{itemize} 
-\reqd \cite{summersIllusion}  
-\reqd \cite{acemogluCrisis}   
-\reqd \cite{keynesMaster}      
-%\reqd \cite{krugmanThoughts} 
-\reqd \cite{krugmanHistory}   
-\reqd \cite{caballeroPretense}
-\reqd \cite{rodrikRules}      
-\reqd \cite{barberaFight}     
-\reqd \cite{romerTrouble}
-\reqd \cite{kocherlakotaTrouble}
+\reqd \si
+\reqd \ac
+\reqd \gk
+\reqd \kh
+\reqd \cp
+\reqd \cite{barberaFight}
 \end{itemize}
 
 \end{verbatimwrite}
@@ -229,15 +209,14 @@ Consumption
 
 \input ./Sections/Consumption/body.tex
 
+\begin{verbatimwrite}{./Sections/Investment/title.tex}
+Investment
+\end{verbatimwrite}
+
 \ifPost
 \immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Consumption}} 
 \immediate{\write18{curl --ftp-create-dirs ftp://ccarroll:phoenix3@llorracc.net/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Consumption.bib -T /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Consumption/Consumption.bib}} 
 \fi
-
-
-\begin{verbatimwrite}{./Sections/Investment/title.tex}
-Investment
-\end{verbatimwrite}
 
 \section{Investment}\label{sec:Investment}
 \begin{verbatimwrite}{./Sections/Investment/body.tex}
@@ -283,7 +262,6 @@ Growth
 \end{itemize}
 \bi
 \reqd \blf, Chapter 2, pp 37-57
-\reqd \cite{deatonStateCapacity}
 \reqd \cite{salaimartin:lecnotes}
 \recm \cite{king&rebelo:trans}
 \recm \cite{phelps:golden}
