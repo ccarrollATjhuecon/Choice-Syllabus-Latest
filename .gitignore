@@ -61,7 +61,7 @@ flycheck_*.el
 *.fot
 *.cb
 *.cb2
-.dep
+*.dep
 
 ## Intermediate documents:
 *.dvi
