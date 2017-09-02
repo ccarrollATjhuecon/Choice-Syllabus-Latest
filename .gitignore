@@ -312,6 +312,21 @@ latexmkrc
 
 #
 Syllabus.pdf
-_region_.tex
 
 *-Old.tex
+
+texput.log
+auto
+_region_.tex
+
+# 
+Consumption.bib
+DSGEModels.bib
+Growth.bib
+Investment.bib
+Method.bib
+Syllabus.bib
+AssetPricing.bib
+
+*.bib
+
