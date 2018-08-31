@@ -10,10 +10,10 @@
 \setboolean{Copy}{true}
 \opt{Web}{\setboolean{Copy}{false}\setboolean{Post}{false}}
 
-\begin{document}\bibliographystyle{\econtexBibStyle}
+\begin{document}\large\bibliographystyle{\econtexBibStyle}
 \begin{center}{{\tiny \url{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus}}}\end{center}
 
-\ifthenelse{\boolean{BigAndWide}}{\Large}{}
+%\ifthenelse{\boolean{BigAndWide}}{\Large}{}
 
 \begin{verbatimwrite}{\texname.title}
 Syllabus for Intertemporal Choice
@@ -30,8 +30,8 @@ Syllabus for Intertemporal Choice
 \begin{center}
 {\tiny \href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.pdf}{\texname} \hfill \today}
 
-{\LARGE Syllabus}
-\medskip\medskip
+% {\LARGE Syllabus}
+% \medskip\medskip
 
 {\LARGE Macroeconomic Theory I: Intertemporal Choice}
 \medskip\medskip
@@ -41,22 +41,20 @@ Syllabus for Intertemporal Choice
 
 %\today \smallskip 
 
-Professor Christopher D. Carroll
+Professor \href{http://www.econ2.jhu.edu/people/ccarroll}{Christopher D. Carroll}
 
 \medskip
 
-\url{http://www.econ2.jhu.edu/people/ccarroll}
-
-Office Hours: See web page
-
-Use password obtainable \href{https://www.econ2.jhu.edu/people/ccarroll/private/PasswordForCarrollCDCApptsAccount.txt}{[here]} (if logged into JHU VPN) for Google calendar: \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}}
+\medskip\medskip
+Office Hours: Tue 17:00-18:00, Wed 14:30-16:00\footnote{
+Obtain password obtainable \href{https://www.econ2.jhu.edu/people/ccarroll/private/PasswordForCarrollCDCApptsAccount.txt}{[here]} for \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/calendar.html}{Google Calendar}}}
 
 \medskip\medskip\medskip
+\small
 Teaching Assistant:  \\
-
 Tongli Zhang \texttt{<\href{mailto:tzhang31@jhu.edu}{\texttt{tzhang31@jhu.edu}}>}
 \\ Office Hours: Wednesday, 11:00-13:00 in the Greenhouse
-
+\normalsize
 \medskip
 
 \end{center}
@@ -74,9 +72,9 @@ If you are not yet a Google Calendar user, you should become one; items that I p
 \medskip
 
 \end{small}
+\normalsize
 
 \medskip\medskip
-
 
 This course presents theory and evidence about the dynamic behavior of
 households, firms, and the macroeconomy as a whole.  We will begin
@@ -103,7 +101,7 @@ later in the course.}
 \noindent Course handouts are available at: 
 \medskip
 
-\texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/LectureNotes}{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/LectureNotes}}
+\texttt{\href{http://econ.jhu.edu/people/ccarroll/courses/Choice/LectureNotes}{http://econ.jhu.edu/people/ccarroll/courses/Choice/LectureNotes}}
 
 \pagebreak
 
@@ -117,7 +115,7 @@ Methodology for Macroeconomists
 
 \begin{itemize}
 \item[Bib:] \href{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Method.bib}{Method.bib}
-\item[Handouts:]  \url{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/lecturenotes/CourseIntro}
+\item[Handouts:]  \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/lecturenotes/CourseIntro}{CourseIntro}}
 \item[Readings:]
 \end{itemize}
 
@@ -133,14 +131,14 @@ Methodology for Macroeconomists
 \begin{itemize} 
 \reqd \cite{summersIllusion}  
 \reqd \cite{acemogluCrisis}   
-\reqd \cite{keynesMaster}      
+%\reqd \cite{keynesMaster}      
 %\reqd \cite{krugmanThoughts} 
 \reqd \cite{krugmanHistory}   
 \reqd \cite{caballeroPretense}
-\reqd \cite{rodrikRules}      
+%\reqd \cite{rodrikRules}      
 \reqd \cite{barberaFight}     
 \reqd \cite{romerTrouble}
-\reqd \cite{kocherlakotaTrouble}
+%\reqd \cite{kocherlakotaTrouble}
 \end{itemize}
 
 \end{verbatimwrite}
@@ -149,7 +147,7 @@ Methodology for Macroeconomists
 
 \ifPost
 \immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Method}} 
-\immediate{\write18{curl --ftp-create-dirs ftp://ccarroll:phoenix3@llorracc.net/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Method.bib -T /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Method/Method.bib}} 
+\immediate{\write18{cp /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Method/Method.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Method.bib}} 
 \fi
 
 \begin{verbatimwrite}{./Sections/Consumption/title.tex}
@@ -161,7 +159,7 @@ Consumption
 
 \begin{itemize}
 \item[Bib:] \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus/Consumption.bib}{Consumption.bib}}
-\item[Handouts:] \url{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/LectureNotes/Consumption/}
+\item[Handouts:] \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/LectureNotes/Consumption/}{Consumption}}
 \item[Readings:]
 \end{itemize}
 
@@ -221,7 +219,7 @@ Consumption
 
 \bi
 \reqd \cite{lucas:assetpricing}
-\reqd \cite{mehra&prescott:puzzle}
+\reqd \cite{mehraPrescottPuzzle}
 \recm \cite{blanchard:burstingbubbles}
 \recm \cite{carrollIrrational}
 \ei
@@ -231,7 +229,7 @@ Consumption
 
 \ifPost
 \immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Consumption}} 
-\immediate{\write18{curl --ftp-create-dirs ftp://ccarroll:phoenix3@llorracc.net/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Consumption.bib -T /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Consumption/Consumption.bib}} 
+\immediate{\write18{/Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Consumption/Consumption.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Consumption.bib}} 
 \fi
 
 
@@ -243,7 +241,7 @@ Investment
 \begin{verbatimwrite}{./Sections/Investment/body.tex}
 \begin{itemize}
 \item[Bib:] \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus/Investment.bib}{Investment.bib}}
-\item[Handouts:]  \url{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/LectureNotes/Investment}
+\item[Handouts:]  \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/LectureNotes/Investment}{Investment}}
 \item[Readings:]
 \end{itemize}
 
@@ -268,7 +266,7 @@ Growth
 
 \ifPost
 \immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Investment}} 
-\immediate{\write18{curl --ftp-create-dirs ftp://ccarroll:phoenix3@llorracc.net/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Investment.bib -T /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Investment/Investment.bib}} 
+\immediate{\write18{cp /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Investment/Investment.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Investment.bib}} 
 \fi
 
 \section{Growth}\label{sec:Growth}
@@ -279,7 +277,7 @@ Growth
 \providecommand{\ro}{\cite{romer:text}}
 \begin{itemize}
 \item[Bib:] \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus/Growth.bib}{Growth.bib}}
-\item[Handouts:]  \url{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/LectureNotes/Growth}
+\item[Handouts:]  \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/LectureNotes/Growth/}{Growth}}
 \end{itemize}
 \bi
 \reqd \blf, Chapter 2, pp 37-57
@@ -295,7 +293,7 @@ Growth
 
 \ifPost
 \immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Growth}} 
-\immediate{\write18{curl --ftp-create-dirs ftp://ccarroll:phoenix3@llorracc.net/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Growth.bib -T /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Growth/Growth.bib}} 
+\immediate{\write18{cp /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Growth/Growth.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Growth.bib}} 
 \fi
 
 \begin{verbatimwrite}{./Sections/DSGEModels/title.tex}
@@ -306,7 +304,7 @@ Real Business Cycle Models
 \begin{verbatimwrite}{./Sections/DSGEModels/body.tex}
 \begin{itemize}
 \item[Bib:] \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus/DSGEModels.bib}{DSGEModels.bib}}
-\item[Handouts:]  \url{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/LectureNotes/DSGEModels}
+\item[Handouts:]  \texttt{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/choice/LectureNotes/DSGEModels}{DSGEModels}}
 \end{itemize}
 
 \providecommand{\blf}{\cite{blanchard&fischer:text}}
@@ -324,7 +322,7 @@ Real Business Cycle Models
 
 \ifPost
 \immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice DSGEModels}} 
-\immediate{\write18{curl --ftp-create-dirs ftp://ccarroll:phoenix3@llorracc.net/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/DSGEModels.bib -T /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/DSGEModels/DSGEModels.bib}} 
+\immediate{\write18{/Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/DSGEModels/DSGEModels.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/DSGEModels.bib}} 
 \fi
 \pagebreak
 
