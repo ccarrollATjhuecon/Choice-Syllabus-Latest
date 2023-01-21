@@ -314,6 +314,7 @@ latexmkrc
 Syllabus.pdf
 
 *-Old.tex
+*Old/*
 
 texput.log
 auto
