@@ -307,8 +307,6 @@ Temporary Items
 # This requires it to exist but be empty on first commit, and ignored thereafter 
 economics.bib
 *.tmp
-# Custom for ShareLaTeX; allows configuration of ShareLaTeX without configuring other installations
-latexmkrc
 
 #
 Syllabus.pdf
