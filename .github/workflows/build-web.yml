@@ -1,0 +1,84 @@
+########################################################################
+# Rebuild the syllabus PDF and the web version in docs/, on every push
+# that touches a source file.
+#
+# THE POINT OF THIS FILE: docs/ is build output, and from 2023-02-27 to
+# 2026-09-06 nobody ran the build. The PDF stayed current while the
+# published page named a long-departed TA and described a different
+# course. A stale build output merges cleanly forever and nothing
+# complains, so the fix is not "remember to rebuild" - it is this.
+#
+# It runs the SAME build-web.sh that a human runs, so the two cannot
+# drift apart. Fix the script, not this file.
+########################################################################
+
+name: build-web
+
+on:
+  push:
+    branches: [master]
+    # Deliberately NOT docs/** or Syllabus.pdf: those are what this
+    # workflow writes, and listing them would make it trigger itself.
+    paths:
+      - 'Syllabus.tex'
+      - 'Syllabus.sty'
+      - 'econtexRoot.texinput'
+      - 'latexmkrc'
+      - '*.bib'
+      - 'Sections/**'
+      - 'Resources/**'
+      - 'texmf-local/**'
+      - 'build-web.sh'
+      - '.github/workflows/build-web.yml'
+  workflow_dispatch:        # and by hand, from the Actions tab
+
+permissions:
+  contents: write           # needed to push the regenerated docs/
+
+concurrency:
+  group: build-web
+  cancel-in-progress: false # never abandon a half-finished push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Full TeX Live: latexmk, pdflatex, bibtex, make4ht/tex4ht. Installing
+    # these with apt gets a partial texlive that lacks make4ht.
+    container:
+      image: texlive/texlive:latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Trust the workspace
+        # The container runs as root while the checkout is owned by the
+        # runner user; without this git refuses with "dubious ownership".
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Build
+        run: ./build-web.sh
+
+      - name: Sanity-check the output
+        # A make4ht failure can still leave a small, wrong index.html
+        # behind, so check content rather than merely exit status.
+        run: |
+          test -s Syllabus.pdf
+          test -s docs/index.html
+          grep -q 'Teaching Assistant' docs/index.html
+          grep -q 'jhuecon.org_v2kso2hp1memk0vka1gomvorm8' docs/index.html
+
+      - name: Commit the regenerated output
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Syllabus.pdf is in .gitignore but tracked, so it needs -f.
+          git add -A docs
+          git add -f Syllabus.pdf
+          if git diff --cached --quiet; then
+            echo 'docs/ already current - nothing to commit'
+            exit 0
+          fi
+          # [skip ci] is belt and braces; the paths: filter above is what
+          # actually stops this from triggering itself.
+          git commit -m 'Rebuild syllabus web version [skip ci]'
+          git push

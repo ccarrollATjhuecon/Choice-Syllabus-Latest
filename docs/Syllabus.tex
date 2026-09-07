@@ -16,7 +16,7 @@
 \usepackage{\texname} % processes \texname.sty
 
 \begin{document}\large\bibliographystyle{\econtexBibStyle}
-\begin{center}{{\tiny \url{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus}}}\end{center}
+\begin{center}{{\tiny \url{http://ccarrollATjhuecon.github.io/Choice-Syllabus-Latest}}}\end{center}
 
 \begin{verbatimwrite}{\texname.title}
 Syllabus for Intertemporal Choice
@@ -76,15 +76,7 @@ If you are not yet a Google Calendar user, you should become one; items that I p
 
 \medskip\medskip
 
-This course presents theory and evidence about the dynamic behavior of
-households, firms, and the macroeconomy as a whole.  We will begin
-with a thorough discussion of the consumption/saving problem of
-households, including the role of uncertainty, and then discuss
-investment behavior of firms, including the relationship between
-financial markets and firm behavior.  We move next to a discussion of
-the application of dynamic models of firms and households to the
-process of economic growth, and conclude by studying aggregate
-macroeconomic models with dynamically optimizing firms and households.
+Theory and evidence about the dynamic behavior of households, firms, and the macroeconomy as a whole in the short and long run.  Begins with a thorough discussion of the consumption/saving problem of households, including the role of uncertainty, then moves to investment behavior of firms, including the relationship between financial markets and firm behavior.  General equilibrium models of firms and households combine to generate benchmark models of economic growth, which leads us to a benchmark specification for dynamic aggregate macroeconomic models.
 
 This syllabus contains required and recommended readings for each
 topic.  Required readings are indicated by a ${*}$. 
@@ -144,11 +136,6 @@ Methodology for Macroeconomists
 \end{verbatimwrite}
 
 \input ./Sections/Method/body.tex
-
-\ifPost
-\immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Method}} 
-\immediate{\write18{cp /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Method/Method.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Method.bib}} 
-\fi
 
 \begin{verbatimwrite}{./Sections/Consumption/title.tex}
 Consumption
@@ -227,11 +214,6 @@ Consumption
 
 \input ./Sections/Consumption/body.tex
 
-\ifPost
-\immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Consumption}} 
-\immediate{\write18{/Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Consumption/Consumption.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Consumption.bib}} 
-\fi
-
 
 \begin{verbatimwrite}{./Sections/Investment/title.tex}
 Investment
@@ -264,11 +246,6 @@ Investment
 Growth
 \end{verbatimwrite}
 
-\ifPost
-\immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Investment}} 
-\immediate{\write18{cp /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Investment/Investment.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Investment.bib}} 
-\fi
-
 \section{Growth}\label{sec:Growth}
 
 \begin{verbatimwrite}{./Sections/Growth/body.tex}
@@ -290,11 +267,6 @@ Growth
 \end{verbatimwrite}
 
 \input ./Sections/Growth/body.tex
-
-\ifPost
-\immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice Growth}} 
-\immediate{\write18{cp /Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/Growth/Growth.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/Growth.bib}} 
-\fi
 
 \begin{verbatimwrite}{./Sections/DSGEModels/title.tex}
 Real Business Cycle Models
@@ -320,10 +292,6 @@ Real Business Cycle Models
 
 \input ./Sections/DSGEModels/body.tex
 
-\ifPost
-\immediate{\write18{/Volumes/Data/Courses/Tools/makePost/Syllabus/makeSection.sh Choice DSGEModels}} 
-\immediate{\write18{/Volumes/Data/Courses/Choice/Syllabus/LaTeX/Sections/DSGEModels/DSGEModels.bib /Volumes/Sync/jhpulse.johnshopkins.edu/www.econ2.jhu.edu/people/ccarroll/courses/choice/Syllabus/DSGEModels.bib}} 
-\fi
 \pagebreak
 
 \href{https://app.paperpile.com/econark-related-tkUex~5rSTa26MXwWY5FtZQ/all}{Link}: Link to paperpile folder which contains all the readings for this course.
@@ -331,7 +299,8 @@ Real Business Cycle Models
 \renewcommand\refname{\noindent{\href{http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.bib}{\large Readings {\small (click to download \texttt{.bib} file)}}}}
 
 % Make the bibliography
-\input{\LaTeXInputs/bibliography_blend}
+% \input{\LaTeXInputs/bibliography_blend}
+\bibliography{system}
 
 \end{document}
 
