@@ -29,7 +29,12 @@ latexmk -quiet "$DOC.tex"
 echo "==> syncing top-level sources into docs/"
 # Mirror what the original tooling did with 'cp -Rf . ../Web', minus the noise.
 mkdir -p docs
-for f in "$DOC.tex" "$DOC.sty" econtexRoot.texinput latexmkrc *.bib; do
+# $DOC.bbl matters: \bibliography{system} pulls system.bib out of texmf-local,
+# and it is BIBTEX that turns that into $DOC.bbl. latexmk ran bibtex for the PDF
+# above; make4ht never runs it. Without the .bbl copied in, every \cite in the
+# HTML renders as a bare "?" -- 55 of them, the whole reading list, while the PDF
+# stays perfect. Verified broken on the live page 2026-09-07.
+for f in "$DOC.tex" "$DOC.sty" "$DOC.bbl" econtexRoot.texinput latexmkrc *.bib; do
     [ -e "$f" ] && cp -f "$f" docs/ || true
 done
 for d in Sections Resources texmf-local; do
@@ -46,6 +51,16 @@ export TEXMFHOME="$ROOT/docs/texmf-local"
 bash "$DOC.sh"
 
 cd "$ROOT"
+
+# tex4ht renders an unresolved \cite as a bold "?" -- <span class="...">?</span>.
+# Fail rather than publish that: a syllabus whose every reading reads "?" still
+# builds, still deploys, and still looks fine to whoever pushed it.
+if grep -q '>?</span>' docs/index.html; then
+    echo "ERROR: $(grep -c '>?</span>' docs/index.html) unresolved citations in docs/index.html." >&2
+    echo "       $DOC.bbl did not reach docs/, or bibtex did not run. Not publishing." >&2
+    exit 1
+fi
+
 echo "==> done"
 echo "    PDF : $(ls -la $DOC.pdf | awk '{print $5}') bytes"
 echo "    HTML: $(ls -la docs/index.html | awk '{print $5}') bytes"
