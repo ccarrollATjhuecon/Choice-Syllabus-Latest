@@ -112,11 +112,14 @@ Css: .sectionHead, .likesectionHead { font-size: 1.5157em; }
 Css: .subsectionHead, .likesubsectionHead { font-size: 1.3195em; }
 Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1.1487em; }
 Css:  @media (prefers-color-scheme: dark) { img[src^="Syllabus"]{filter: invert(1); } } 
+Css:  body { background-color: Canvas; color: CanvasText; color-scheme: light dark; } 
 Css: li p.indent { text-indent: 0em }
 Css: li p:first-child{ margin-top:0em; }
 Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
 Css: li p:first-child{ margin-bottom:0; }
 Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: ul.itemize1,ol.enumerate1{padding-left: 0;}
+Css: ul li.itemize,ol li.enumerate{margin-left: 1rem;}
 Css: .enumerate1 {list-style-type:decimal;}
 Css: .enumerate2 {list-style-type:lower-alpha;}
 Css: .enumerate3 {list-style-type:lower-roman;}
@@ -149,6 +152,7 @@ Css: .framebox-l {text-align:left;}
 Css: .framebox-r {text-align:right;}
 Css: span.thank-mark{ vertical-align: super }
 Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: aside.footnote-text p{margin-top:0; margin-bottom:0;text-indent: 0;}
 Css: code.verb{font-family:monospace,monospace;}
 Css: td p:first-child{ margin-top:0em; }
 Css: td p:last-child{ margin-bottom:0em; }
@@ -167,7 +171,6 @@ Css: .hline td, .cline td{ padding: 0; }
 Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
 Css: .hline {border-top: 1px solid black;}
 Css: .hline + .vspace:last-child{display:none;}
-Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
 Css: .tabbing-right {text-align:right;}
 Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
 Css: div.float img {text-align:center;}
@@ -192,8 +195,10 @@ Css: table.pmatrix {width:100%;}
 Css: span.bar-css {text-decoration:overline;}
 Css: img.cdots{vertical-align:middle;}
 Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
-Css: .index-item, .index-subitem, .index-subsubitem {display:block}
-Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: .theindex-letter{ margin-top: 1em;}
+Css: .index-subitem{ margin-left: 2ch;}
+Css: .index-subsubitem{ margin-left: 4ch;}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center; margin-top: 0.5rem;}
 Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
 Css: h1.partHead{text-align: center}
 Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
@@ -203,7 +208,7 @@ Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
 Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
 Css: .verse{white-space:nowrap; margin-left:2em}
 Css: div.maketitle {text-align:center;}
-Css: h2.titleHead{text-align:center;}
+Css: h1.titleHead{text-align:center;}
 Css: div.maketitle{ margin-bottom: 2em; }
 Css: div.author, div.date {text-align:center;}
 Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
@@ -221,6 +226,8 @@ Css: figure.figure {text-align:center;}
 Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
 Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
 Css: p + figcaption, img + figcaption{margin-top: 1em;}
+Css: .thebibliography dl { display: grid; grid-auto-columns: min-content 1fr; grid-auto-flow: column; }
+Css: .thebibliography dt { grid-column: 1; margin-bottom: 0.5em; }
 Css: .abstract{margin:1em;}
 Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
 Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
@@ -228,6 +235,8 @@ Css: figure.figure {text-align:center;}
 Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
 Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
 Css: p + figcaption, img + figcaption{margin-top: 1em;}
+Css: .thebibliography dl { display: grid; grid-auto-columns: min-content 1fr; grid-auto-flow: column; }
+Css: .thebibliography dt { grid-column: 1; margin-bottom: 0.5em; }
 Css: .cancel{background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
 Css: .bcancel{background: linear-gradient(to bottom left, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
 Css: .xcancel{background: linear-gradient(to bottom left, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%), linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);}
@@ -258,7 +267,6 @@ Css: .hline td, .cline td{ padding: 0; }
 Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
 Css: .hline {border-top: 1px solid black;}
 Css: .hline + .vspace:last-child{display:none;}
-Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
 Css: div.array {text-align:center;}
 Css: table.boxedverbatim {width:100%;}
 Css:  pre.boxedverbatim{border:solid 1px; padding-right:1em;} 
