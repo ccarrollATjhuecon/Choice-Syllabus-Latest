@@ -11,6 +11,13 @@
 # run it. It now also runs in CI on every push (.github/workflows/build-web.yml).
 #
 # Both humans and CI call THIS script, so the two cannot drift apart.
+#
+# DO NOT RUN 'latexmk -c' HERE. latexmkrc lists svg (and png) in $clean_ext,
+# while the repo tracks real .svg SOURCE -- Resources/PoweredByEconARK.svg
+# among them. A clean therefore deletes tracked files that no build
+# regenerates. Both of those turned up deleted in the working tree on
+# 2026-09-07 and had to be restored from HEAD. This script never cleans;
+# if you add a clean step, narrow $clean_ext first.
 
 set -euo pipefail
 
