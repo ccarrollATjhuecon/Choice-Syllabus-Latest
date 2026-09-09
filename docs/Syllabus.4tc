@@ -1,12 +1,12 @@
 \expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
-\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Course Intro: Methodology for Macroeconomists}}{3}\relax 
-\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Consumption}}{4}\relax 
-\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-30002.1}{QQ2-1-3}{Introduction and Overview}}{4}\relax 
-\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-40002.2}{QQ2-1-4}{The Life Cycle and Overlapping Generations Models}}{4}\relax 
-\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-50002.3}{QQ2-1-5}{The Infinite Horizon Representative Agent Model}}{5}\relax 
-\doTocEntry\tocsubsection{2.4}{\csname a:TocLink\endcsname{1}{x1-60002.4}{QQ2-1-6}{Consumption with Uncertainty and/or Liquidity Constraints}}{6}\relax 
-\doTocEntry\tocsubsection{2.5}{\csname a:TocLink\endcsname{1}{x1-70002.5}{QQ2-1-7}{Consumption Based Asset Pricing}}{7}\relax 
-\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-80003}{QQ2-1-8}{Investment}}{8}\relax 
-\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-90004}{QQ2-1-9}{Growth}}{9}\relax 
-\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-100005}{QQ2-1-10}{Real Business Cycle Models}}{9}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-11000}{QQ2-1-11}{\:noindent {\href  {http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.bib}{\large  Readings {\small  \add@extra@listi {sml}(click to download \texttt  {.bib} file)}}}}}{11}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Course Intro: Methodology for Macroeconomists}}{4}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Consumption}}{5}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-30002.1}{QQ2-1-3}{Introduction and Overview}}{5}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-40002.2}{QQ2-1-4}{The Life Cycle and Overlapping Generations Models}}{5}\relax 
+\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-50002.3}{QQ2-1-5}{The Infinite Horizon Representative Agent Model}}{6}\relax 
+\doTocEntry\tocsubsection{2.4}{\csname a:TocLink\endcsname{1}{x1-60002.4}{QQ2-1-6}{Consumption with Uncertainty and/or Liquidity Constraints}}{7}\relax 
+\doTocEntry\tocsubsection{2.5}{\csname a:TocLink\endcsname{1}{x1-70002.5}{QQ2-1-7}{Consumption Based Asset Pricing}}{8}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-80003}{QQ2-1-8}{Investment}}{9}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-90004}{QQ2-1-9}{Growth}}{10}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-100005}{QQ2-1-10}{Real Business Cycle Models}}{10}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-11000}{QQ2-1-11}{\:noindent {\href  {http://www.econ2.jhu.edu/people/ccarroll/courses/Choice/Syllabus.bib}{\large  Readings {\small  \add@extra@listi {sml}(click to download \texttt  {.bib} file)}}}}}{12}\relax 
